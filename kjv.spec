@@ -1,5 +1,5 @@
 Name:		kjv
-Version:	0
+Version:    0^2025012806efb21a7
 Release:	1
 Source0:	https://github.com/layeh/kjv/archive/06efb21a76ee0ab0030210c5abe3d72c84320aa9.tar.gz
 Summary:	Read the Bible from your terminal 
