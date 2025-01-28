@@ -1,20 +1,22 @@
 Name:		kjv
-Version:    0^2025012806efb21a7
+Version:    1.0.0
 Release:	1
-Source0:	https://github.com/layeh/kjv/archive/06efb21a76ee0ab0030210c5abe3d72c84320aa9.tar.gz
+Source0:	https://github.com/StudebakerGuy/kjv/archive/refs/tags/1.0.0.tar.gz
 Summary:	Read the Bible from your terminal 
 URL:		https://github.com/layeh/kjv/
 License:	Unlicense
 Group:	    Text tools  	
 
-Buildrequires: slibtool
-Buildrequires: pkgconfig(readline)
+BuildRequires: slibtool
+BuildRequires: pkgconfig(readline)
 
 Requires: readline
 
 
 %description
-Read the KJV Bible from your terminal
+Read the KJV Bible from your terminal.
+
+This is a fork of https://github.com/layeh/kjv/ 
 
 %prep
 %autosetup -C 0 
@@ -24,8 +26,9 @@ Read the KJV Bible from your terminal
 %make_build
 
 %install
-mkdir -p %{buildroot}/usr/bin
-cp kjv %{buildroot}/usr/bin
+install -D -p -m 0755 %{name}     %{buildroot}%{_bindir}/%{name}
+install -D -p -m 0644 LICENSE %{buildroot}%{_defaultlicensedir}/%{name}/LICENSE
 
 %files
-/usr/bin/*
+%{_bindir}/%{name}
+%{_defaultlicensedir}/%{name}/LICENSE
