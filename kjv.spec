@@ -1,3 +1,5 @@
+%global debug_package %{nil}
+
 Name:		kjv
 Version:    1.0.0
 Release:	1
@@ -12,7 +14,6 @@ BuildRequires: pkgconfig(readline)
 
 Requires: readline
 
-
 %description
 Read the KJV Bible from your terminal.
 
@@ -22,13 +23,11 @@ This is a fork of https://github.com/layeh/kjv/
 %autosetup -C 0 
 
 %build
-%set_build_flags \
 %make_build
 
 %install
-install -D -p -m 0755 %{name}     %{buildroot}%{_bindir}/%{name}
-install -D -p -m 0644 LICENSE %{buildroot}%{_defaultlicensedir}/%{name}/LICENSE
+install -D -p -m 0755 %{name}   %{buildroot}%{_bindir}/%{name}
 
 %files
 %{_bindir}/%{name}
-%{_defaultlicensedir}/%{name}/LICENSE
+%license LICENSE
