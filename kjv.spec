@@ -9,9 +9,7 @@ URL:		https://github.com/layeh/kjv/
 License:    Unlicense
 Group:      Text tools
 
-BuildRequires:  slibtool
 BuildRequires:  pkgconfig(readline)
-
 Requires:  readline
 
 %description
