@@ -3,7 +3,7 @@
 Name:       kjv
 Version:    1.0.0
 Release:	1
-Source0:	https://github.com/StudebakerGuy/kjv_source/archive/refs/tags/1.0.0.tar.gz
+Source0:	https://github.com/StudebakerGuy/kjv_source/archive/refs/tags/%{version}.tar.gz
 Summary:	Read the Bible from your terminal 
 URL:		https://github.com/layeh/kjv/
 License:    Unlicense
